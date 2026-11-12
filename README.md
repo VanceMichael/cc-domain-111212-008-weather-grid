@@ -16,9 +16,12 @@ Python 3.11 或以上，仅标准库，无需凭据和外部数据。使用容�
 
 ## 测试与构建
 
+构建工具版本固定在 `requirements-build.txt`，在环境准备阶段执行 `python3 -m pip install -r requirements-build.txt`；容器构建已包含此步骤。应用运行仍仅使用标准库，测试及演示不安装依赖。
+
 ```sh
 python3 -m unittest discover -s tests -v
 python3 -m compileall -q app.py source.py sampledata.py storage.py transport.py
+python3 -m build --wheel --no-isolation
 ```
 
 ## 快速演示
