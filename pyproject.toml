@@ -9,4 +9,4 @@ requires = ["setuptools==75.8.0", "wheel==0.45.1"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["app", "source", "sampledata", "storage", "transport", "scenario"]
+py-modules = ["app", "source", "collector", "sampledata", "storage", "transport", "scenario"]
